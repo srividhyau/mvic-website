@@ -1,6 +1,10 @@
 import { Menu, X, Factory, Target, Eye, Globe, Award, TrendingUp, Users, Mail, Phone, MapPin } from 'lucide-react';
 import { useState } from 'react';
 
+const getAssetUrl = (path: string) => {
+  return import.meta.env.BASE_URL + path;
+};
+
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -16,19 +20,19 @@ function App() {
   ];
 
   const products = [
-    { name: "Men's Trousers", description: "Quality trousers with excellent fit and finish", image: "/images/products/trousers.png" },
-    { name: "Denim", description: "Premium denim with various wash treatments", image: "/images/products/denim.jpg" },
-    { name: "Pyjamas", description: "Comfortable sleepwear in natural fabrics", image: "/images/products/pyjamas.jpg" },
-    { name: "Chino Shorts", description: "Versatile shorts for casual wear", image: "/images/products/shorts.png" },
+    { name: "Men's Trousers", description: "Quality trousers with excellent fit and finish", image: getAssetUrl("images/products/trousers.png") },
+    { name: "Denim", description: "Premium denim with various wash treatments", image: getAssetUrl("images/products/denim.jpg") },
+    { name: "Pyjamas", description: "Comfortable sleepwear in natural fabrics", image: getAssetUrl("images/products/pyjamas.jpg") },
+    { name: "Chino Shorts", description: "Versatile shorts for casual wear", image: getAssetUrl("images/products/shorts.png") },
   ];
 
   const clients = [
-    { name: "Harmont & Blaine", logo: "/images/clients/harmont-blaine.png" },
-    { name: "Steel & Jelly", logo: "/images/clients/steel-jelly.png" },
-    { name: "Chalktalk Sports", logo: "/images/clients/chalktalk.png" },
-    { name: "Bacci", logo: "/images/clients/bacci.png" },
-    { name: "TATA", logo: "/images/clients/tata.png" },
-    { name: "Billie the Kid", logo: "/images/clients/billie.png" }
+    { name: "Harmont & Blaine", logo: getAssetUrl("images/clients/harmont-blaine.png") },
+    { name: "Steel & Jelly", logo: getAssetUrl("images/clients/steel-jelly.png") },
+    { name: "Chalktalk Sports", logo: getAssetUrl("images/clients/chalktalk.png") },
+    { name: "Bacci", logo: getAssetUrl("images/clients/bacci.png") },
+    { name: "TATA", logo: getAssetUrl("images/clients/tata.png") },
+    { name: "Billie the Kid", logo: getAssetUrl("images/clients/billie.png") }
   ];
 
   return (
@@ -105,20 +109,20 @@ function App() {
               MVIC is one of the leading garment <strong>exporter</strong> in India specializing in manufacturing of garments using <strong>cotton, linen, viscose, Tencil, and organic fabrics</strong>.
             </p>
             <p className="text-lg mb-6 leading-relaxed text-slate-900 text-justify">
-              The factories are set in Tamil Nadu at Krishnagiri, and Aranthanki in a population free environment catering both domestic and global market. The company is now one of the fastest growing exporters creating innovative fashion statements, with top end production line completely automated using modern technologies and with hands on well trained operators.
+              The factory is set in Tamil Nadu at Krishnagiri, in a pollution free environment catering both domestic and global market. The company is now one of the  growing exporters creating innovative fashion statements, with top end production line completely automated using modern technologies and with hands on well trained operators.
             </p>
             <p className="text-lg font-semibold text-slate-900 text-justify">
               MVIC is always committed to quality and timely delivery.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <img
-              src="/images/aboutus/aboutus-factory.JPG"
+              src={getAssetUrl("images/aboutus/aboutus-factory.JPG")}
               alt="Factory Manufacturing"
               className="rounded-lg shadow-lg w-full max-h-[500px] object-contain bg-slate-100"
             />
             <img
-              src="/images/aboutus/aboutus-outer.JPG"
+              src={getAssetUrl("images/aboutus/aboutus-outer.JPG")}
               alt="Manufacturing Facility"
               className="rounded-lg shadow-lg w-full max-h-[500px] object-contain bg-slate-100"
             />
@@ -146,22 +150,22 @@ function App() {
           </div>
           <div className="grid md:grid-cols-4 gap-6">
             <img
-              src="/images/competency/competency-1.png"
+              src={getAssetUrl("images/competency/competency-1.png")}
               alt="Manufacturing Process"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
             <img
-              src="/images/competency/competency-2.png"
+              src={getAssetUrl("images/competency/competency-2.png")}
               alt="Quality Control"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
             <img
-              src="/images/competency/competency-3.jpg"
+              src={getAssetUrl("images/competency/competency-3.jpg")}
               alt="Production Line"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
             <img
-              src="/images/competency/competency-4.png"
+              src={getAssetUrl("images/competency/competency-4.png")}
               alt="Skilled Workforce"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
@@ -220,47 +224,47 @@ function App() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <img
-              src="/images/infrastructure/infrastructure-1.jpg"
+              src={getAssetUrl("images/infrastructure/infrastructure-1.jpg")}
               alt="Factory Environment"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
             <img
-              src="/images/infrastructure/infrastructure-2.jpg"
+              src={getAssetUrl("images/infrastructure/infrastructure-2.jpg")}
               alt="Natural Surroundings"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
             <img
-              src="/images/infrastructure/infrastructure-3.jpg"
+              src={getAssetUrl("images/infrastructure/infrastructure-3.jpg")}
               alt="Clean Environment"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
             <img
-              src="/images/infrastructure/infrastructure-4.JPG"
+              src={getAssetUrl("images/infrastructure/infrastructure-4.JPG")}
               alt="Manufacturing Facility"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
             <img
-              src="/images/infrastructure/infrastructure-5.JPG"
+              src={getAssetUrl("images/infrastructure/infrastructure-5.JPG")}
               alt="Production Facility"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
             <img
-              src="/images/infrastructure/infrastructure-6.JPG"
+              src={getAssetUrl("images/infrastructure/infrastructure-6.JPG")}
               alt="Quality Assurance"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
             <img
-              src="/images/infrastructure/infrastructure-7.JPG"
+              src={getAssetUrl("images/infrastructure/infrastructure-7.JPG")}
               alt="Packaging Process"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
             <img
-              src="/images/infrastructure/infrastructure-8.JPG"
+              src={getAssetUrl("images/infrastructure/infrastructure-8.JPG")}
               alt="Final Inspection"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
             <img
-              src="/images/infrastructure/infrastructure-9.png"
+              src={getAssetUrl("images/infrastructure/infrastructure-9.png")}
               alt="Advanced Machinery"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
@@ -276,27 +280,27 @@ function App() {
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <img
-                src="/images/environment/nature1.jpg"
+                src={getAssetUrl("images/environment/nature1.jpg")}
                 alt="Natural Surroundings"
                 className="rounded-lg shadow-lg w-full aspect-square object-contain"
               />
               <img
-                src="/images/environment/nature2.jpg"
+                src={getAssetUrl("images/environment/nature2.jpg")}
                 alt="Rural Landscape"
                 className="rounded-lg shadow-lg w-full aspect-square object-contain"
               />
               <img
-                src="/images/environment/nature3.png"
+                src={getAssetUrl("images/environment/nature3.png")}
                 alt="Green Environment"
                 className="rounded-lg shadow-lg w-full aspect-square object-contain"
               />
               <img
-                src="/images/environment/nature4.jpg"
+                src={getAssetUrl("images/environment/nature4.jpg")}
                 alt="Peaceful Setting"
                 className="rounded-lg shadow-lg w-full aspect-square object-contain"
               />
               <img
-                src="/images/environment/nature5.jpg"
+                src={getAssetUrl("images/environment/nature5.jpg")}
                 alt="Our Environment"
                 className="rounded-lg shadow-lg w-full aspect-square object-contain"
               />
@@ -353,7 +357,7 @@ function App() {
             </div>
             <div>
               <img
-                src="/images/competency/social.png"
+                src={getAssetUrl("images/competency/social.png")}
                 alt="Social Contribution"
                 className="rounded-lg shadow-xl w-full object-cover"
               />
@@ -408,7 +412,7 @@ function App() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-yellow-400 flex justify-end h-64">
-                  <img src="/images/catalogue/trouser-1.png" alt="Trouser Style 1" className="h-full object-contain" />
+                  <img src={getAssetUrl("images/catalogue/trouser-1.png")} alt="Trouser Style 1" className="h-full object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-HBJ-7163</p>
@@ -422,7 +426,7 @@ function App() {
                 </div>
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
-                <img src="/images/catalogue/trouser-2.png" alt="Trouser Style 2" className="w-full h-64 object-cover" />
+                <img src={getAssetUrl("images/catalogue/trouser-2.png")} alt="Trouser Style 2" className="w-full h-64 object-cover" />
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-HBJ-Corduroy</p>
                   <p className="text-xs mb-1">Corduroy Trouser</p>
@@ -433,7 +437,7 @@ function App() {
                 </div>
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
-                <img src="/images/catalogue/trouser-3.png" alt="Trouser Style 3" className="w-full h-64 object-cover" />
+                <img src={getAssetUrl("images/catalogue/trouser-3.png")} alt="Trouser Style 3" className="w-full h-64 object-cover" />
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-HBJ-Seersucker</p>
                   <p className="text-xs mb-1">Seersucker Pant</p>
@@ -445,7 +449,7 @@ function App() {
                 </div>
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
-                <img src="/images/catalogue/trouser-4.png" alt="Trouser Style 4" className="w-full h-64 object-cover" />
+                <img src={getAssetUrl("images/catalogue/trouser-4.png")} alt="Trouser Style 4" className="w-full h-64 object-cover" />
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-HBJ-LINEN MIX</p>
                   <p className="text-xs mb-1">Linen Mix Trouser</p>
@@ -455,7 +459,7 @@ function App() {
                 </div>
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
-                <img src="/images/catalogue/trouser-5.png" alt="Trouser Style 5" className="w-full h-64 object-cover" />
+                <img src={getAssetUrl("images/catalogue/trouser-5.png")} alt="Trouser Style 5" className="w-full h-64 object-cover" />
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-HB-7140</p>
                   <p className="text-xs mb-1">Stripe Design Trouser</p>
@@ -466,7 +470,7 @@ function App() {
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-navy-900">
-                  <img src="/images/catalogue/trouser-6.png" alt="Trouser Style 6" className="w-full h-64 object-contain" />
+                  <img src={getAssetUrl("images/catalogue/trouser-6.png")} alt="Trouser Style 6" className="w-full h-64 object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-HBJ-BC</p>
@@ -479,7 +483,7 @@ function App() {
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-yellow-400">
-                  <img src="/images/catalogue/trouser-7.png" alt="Trouser Style 7" className="w-full h-64 object-contain" />
+                  <img src={getAssetUrl("images/catalogue/trouser-7.png")} alt="Trouser Style 7" className="w-full h-64 object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-HBJ-Print Chino</p>
@@ -492,7 +496,7 @@ function App() {
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-navy-900">
-                  <img src="/images/catalogue/trouser-8.png" alt="Trouser Style 8" className="w-full h-64 object-contain" />
+                  <img src={getAssetUrl("images/catalogue/trouser-8.png")} alt="Trouser Style 8" className="w-full h-64 object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-HBJ-7150</p>
@@ -505,7 +509,7 @@ function App() {
                 </div>
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
-                <img src="/images/catalogue/trouser-9.png" alt="Trouser Style 9" className="w-full h-64 object-contain" />
+                <img src={getAssetUrl("images/catalogue/trouser-9.png")} alt="Trouser Style 9" className="w-full h-64 object-contain" />
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-HBJ-WNJ10</p>
                   <p className="text-xs mb-1">Print Stretch Trouser</p>
@@ -522,7 +526,7 @@ function App() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-navy-900">
-                  <img src="/images/catalogue/denim-1.png" alt="Denim Style 1" className="w-full h-64 object-cover" />
+                  <img src={getAssetUrl("images/catalogue/denim-1.png")} alt="Denim Style 1" className="w-full h-64 object-cover" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-TD-001</p>
@@ -536,7 +540,7 @@ function App() {
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-yellow-400 flex justify-end h-64">
-                  <img src="/images/catalogue/denim-3.png" alt="Denim Style 3" className="h-full object-contain" />
+                  <img src={getAssetUrl("images/catalogue/denim-3.png")} alt="Denim Style 3" className="h-full object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-RY-002</p>
@@ -549,7 +553,7 @@ function App() {
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-navy-900">
-                  <img src="/images/catalogue/denim-4.png" alt="Denim Style 4" className="w-full h-64 object-contain" />
+                  <img src={getAssetUrl("images/catalogue/denim-4.png")} alt="Denim Style 4" className="w-full h-64 object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-PL-001</p>
@@ -561,7 +565,7 @@ function App() {
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-navy-900">
-                  <img src="/images/catalogue/denim-5.png" alt="Denim Style 5" className="w-full h-64 object-contain" />
+                  <img src={getAssetUrl("images/catalogue/denim-5.png")} alt="Denim Style 5" className="w-full h-64 object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-PL-002</p>
@@ -574,7 +578,7 @@ function App() {
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-yellow-400">
-                  <img src="/images/catalogue/denim-6.png" alt="Denim Style 6" className="w-full h-64 object-contain" />
+                  <img src={getAssetUrl("images/catalogue/denim-6.png")} alt="Denim Style 6" className="w-full h-64 object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-PL-003</p>
@@ -586,7 +590,7 @@ function App() {
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-navy-900">
-                  <img src="/images/catalogue/denim-9.png" alt="Denim Style 9" className="w-full h-64 object-contain" />
+                  <img src={getAssetUrl("images/catalogue/denim-9.png")} alt="Denim Style 9" className="w-full h-64 object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-Bacci-001</p>
@@ -606,7 +610,7 @@ function App() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-yellow-400">
-                  <img src="/images/catalogue/shorts-1.png" alt="Shorts Style" className="w-full h-64 object-contain" />
+                  <img src={getAssetUrl("images/catalogue/shorts-1.png")} alt="Shorts Style" className="w-full h-64 object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-HBJ-B7030</p>
@@ -621,7 +625,7 @@ function App() {
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-navy-900">
-                  <img src="/images/catalogue/shorts-2.png" alt="Shorts Style 2" className="w-full h-64 object-contain" />
+                  <img src={getAssetUrl("images/catalogue/shorts-2.png")} alt="Shorts Style 2" className="w-full h-64 object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-RL-UL</p>
@@ -635,7 +639,7 @@ function App() {
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-navy-900">
-                  <img src="/images/catalogue/shorts-3.png" alt="Shorts Style 3" className="w-full h-64 object-contain" />
+                  <img src={getAssetUrl("images/catalogue/shorts-3.png")} alt="Shorts Style 3" className="w-full h-64 object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-RL-Check</p>
@@ -650,7 +654,7 @@ function App() {
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-navy-900">
-                  <img src="/images/catalogue/shorts-4.png" alt="Shorts Style 4" className="w-full h-64 object-contain" />
+                  <img src={getAssetUrl("images/catalogue/shorts-4.png")} alt="Shorts Style 4" className="w-full h-64 object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-Boxer</p>
@@ -663,7 +667,7 @@ function App() {
               </div>
               <div className="bg-slate-800 rounded-lg overflow-hidden">
                 <div className="bg-yellow-400">
-                  <img src="/images/catalogue/shorts-5.png" alt="Shorts Style 5" className="w-full h-64 object-contain" />
+                  <img src={getAssetUrl("images/catalogue/shorts-5.png")} alt="Shorts Style 5" className="w-full h-64 object-contain" />
                 </div>
                 <div className="p-4">
                   <p className="text-sm font-bold text-yellow-400 mb-2">Style# MV-HBJ-B7028</p>
@@ -711,7 +715,7 @@ function App() {
           </p>
           <div className="max-w-4xl mx-auto">
             <img
-              src="/images/clients/clients.png"
+              src={getAssetUrl("images/clients/clients.png")}
               alt="Our Clients"
               className="rounded-lg shadow-xl w-full object-cover"
             />
